@@ -1,0 +1,83 @@
+/**/
+
+body{
+    background-image: url(../images/fondo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: max-content;
+}
+
+.fondo{
+    background-image: url();
+}
+
+.description{
+    height: 300px;
+    transition: height .3s ease-in .3s;
+    overflow: hidden;
+}
+
+.description:hover{
+    height: 550px;
+}
+
+.table__producto{
+    display: flex;
+    width: 100%;
+}
+.table__producto > img {
+    width: 9rem;
+    object-fit: contain;
+    border-radius: 6px;
+    margin-right: 20px;
+}
+.table__cantidad{
+    width: 40px;
+    border: none;
+    outline: 0;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.table__style{
+    background-color: rgba(255, 255, 255, 0.767);
+    backdrop-filter: blur(6px);
+    height: max-content;
+}
+
+.container-home__style{
+    font-size: medium;
+    font-family: Arial;
+    
+}
+
+.carrusel{
+    text-align: center;
+}
+
+
+.container{
+    backdrop-filter: blur(6px);
+}
+
+.formulario{
+    background-color: rgba(255, 255, 255, 0.767);
+    width: 40%;
+}
+
+.carrito{
+    background-color: rgba(255, 255, 255, 0.705);
+}
+
+.dropdown{
+    width: 400px;
+    text-align: left;
+    padding: 1px;
+}
+
+.texto-stock{
+    text-decoration: underline;
+}

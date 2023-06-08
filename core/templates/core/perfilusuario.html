@@ -1,0 +1,73 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block contenido %}
+    <section class="cuerpo">
+      <div class="container formulario">
+        <div class="row">
+          {% for aux in listadoUser %}
+          <!-- DEBERIA FUNCIONAR BIEN EN TEORÍA -->
+          {% if aux.id == user.id %}
+          <div class="col">
+            <h5 class="text-truncate" style="text-align: left; padding: 15px;">Nombre: {{ aux.nombre}} {{aux.apellido}}</h5>
+            <h6 class="text-truncate" style="text-align: left; padding: 15px;">Correo: {{ aux.correo }}</h6>
+            <h6 class="text-truncate" style="text-align: left; padding: 15px;">Dirección: {{ aux.direccion }}</h6>
+            <h6 class="text-truncate" style="text-align: left; padding: 15px;">Teléfono: {{ aux.telefono }}</h6>
+            <h6 class="text-truncate" style="text-align: left; padding: 15px;">ID: {{ aux.id }}</h6>
+            {% if aux.suscrito %}
+            <h6 class="text-truncate" style="text-align: left; padding: 15px;">Suscripción: Sí</h6>
+            {% else %}
+            <h6 class="text-truncate" style="text-align: left; padding: 15px;">Suscripción: No</h6>
+            {% endif %}
+            <!--FALTA GÉNERO Y CÓDIGO POSTAL-->
+            <div class="row">
+              <div class="col sm-3">
+                <a href="suscripcion.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" href="suscripcion.html">Suscribirse</a>
+              </div>
+              <div class="col sm-9">
+                <a href="despacho.html" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Despacho</a>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div> <br>
+      </div>
+    </section>
+    <div class="modal fade" id="CerrarSesion">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h3>¿QUIERES CERRAR SESIÓN?</h3>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <div class="col s6">
+              <a class="btn btn-success" href="index.html" role="button">Cerrar sesión</a>
+              <!--LLEVA A LA PÁGINA DE REGISTRO DE USUARIO-->
+            </div>
+            <div class="col s6">
+              <a class="btn btn-danger" href="index sesion iniciada.html" role="button">Cancelar</a>
+              <!--LLEVA A INDEX CON SESIÓN INICIADA-->
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+{% endblock %}

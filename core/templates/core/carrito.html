@@ -1,0 +1,47 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block navbar %}
+{% endblock %}
+{% block contenido %}
+<body>
+<br><br><br><br><br><br><br>
+{% for aux in productos %}
+<div class="alert alert-primary" role="alert">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+        </tr>
+        <tr>
+          <th scope="col">NOMBRE: {{ aux.producto.nombre }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <th scope="col">PRECIO: {{ aux.producto.precio }}</th>
+        </tr>
+        <tr>
+            <th scope="col">CANTIDAD: {{ aux.cantidad }}
+                <a href="" class="badge btn btn-dark badge-dark">+</a>
+                <a href="" class="badge btn btn-dark badge-dark">-</a>
+            </th>
+        </tr>
+        <tr>
+            <th scope="row">Total: $ {{ aux.subtotal }}</th>
+            {% endfor %}
+        </tr>
+    </tbody>
+</table>
+<hr>
+</div>
+    <div class="row text-center">
+        <div class="col-6"><a href="" class="btn btn-danger">Limpiar</a></div>
+        <div class="col-6"><a href="#" class="btn btn-success">Guardar</a></div>
+    </div>
+</body>
+{% endblock %}
+
+
+{% block js %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="{% static 'core/js/mensajes.js' %}"></script>
+{% endblock %}

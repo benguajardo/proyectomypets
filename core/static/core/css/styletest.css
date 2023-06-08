@@ -1,0 +1,115 @@
+/*navbar*/
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.7s;
+    padding: 30px 20px;
+    z-index: 10;
+}
+header.abajo{
+    background: #28a49c;
+    padding: 15px 20px;
+
+}
+header .logo{
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    color: #000000;
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: 2px;
+    transition: 1.5s;
+    text-decoration: none;
+}
+.letras-navbar{
+    color: #000000;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    list-style: none;
+}
+header ul li a{
+    position: relative;
+    font-family: helvetica;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: 0.7s;
+}
+.zona1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('static/images/fondodsada.jpg');
+    background-size: cover;
+}
+
+header.abajo .logo,
+header.abajo ul li a {
+    color: #ffffff;
+}
+.cuerpo{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    margin-top: 150px;
+}
+
+
+.imglogo{
+    height: 45px;
+    padding-left: 15px;
+}
+.contnavbar{
+    display: flex;
+}
+.contnavbar2{
+    margin-top: 10px;
+}
+
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+    header ul li a{
+        color: #000000;
+    }
+    header .logo{
+        margin-left: 30%;
+        position: fixed;
+    }
+    .imglogo{
+        margin-left: 53%;
+    }
+}
+@media(max-width:566px){
+    .imglogo{
+        opacity: 0;
+    }
+}
+@media(max-width:400px){
+    .car-ses{
+        flex-direction: column;
+    }
+}
